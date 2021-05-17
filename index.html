@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/tei.css">
+  <script src="js/CETEI.js"></script>
+  <script>
+    let c = new CETEI();
+    c.getHTML5('Rosseger.xml', function(data){
+      document.getElementsByTagName('body')[0].appendChild(data);
+    });
+
+    let behaviors = {
+      "tei": {
+        /* Jeder Zeilenumbruch wird auch in HTML angezeigt */
+        "lb": ["<br>"],
+        /* Alle Änderungen werden hervorgehoben: als <b>-Element in HTML */
+         "mod": function(elt) {
+            var b = document.createElement("b");
+            b.innerHTML = elt.innerHTML;
+            return b;
+        },
+        /* Ergänzungen werden unterschiedlich aufgrund der Platzierung
+           ausgegeben: Inline-Ergänzungen mit runden Klammern ()
+                       Ergänzungen am Rand oder über den Text mit eckigen Klammern [] im */
+       "add": [
+         ["[place=inline]",["(",")"]],
+         ["[place=margin]",["[","]"]],
+         ["[place=above]",["[","]"]]
+       ],
+      }
+    };
+    c.addBehaviors(behaviors);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

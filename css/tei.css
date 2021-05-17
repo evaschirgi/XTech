@@ -1,0 +1,37 @@
+tei-body {
+  display: block;
+  background-color: #ece0cf;
+  font-family: Helvetica;
+  padding: 20pt 10pt 10pt 20pt;
+}
+tei-p {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+tei-head {
+  font-size: 16pt;
+  font-style: bold;
+  color: #9e0000;
+}
+/* Streichungen werden durchgestrichen ausgegeben */
+tei-del {
+  text-decoration: line-through;
+}
+/* Unleserlichkeit mit Angabe von Grund werden grau ausgegeben */
+tei-unclear[reason] {
+  color: gray;
+}
+tei-unclear {
+  font-style: italic;
+}
+/* Unterstrichene Wörter sind mit <mod>-Element angegeben */
+tei-mod[type='underline'] {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+/* Wörter, die Geminationsstriche enthalten, sind normalisiert und
+   fargig ausgegeben */
+tei-g {
+  color: #9e0000;
+}

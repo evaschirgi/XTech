@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Der Nachtwächter aus Schwaben</title>
+            <author>Rosegger, Peter (1843-1918)</author>
+            <respStmt>
+               <resp>kodiert von</resp>
+               <name>Eva Schirgi</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>Digitale Edition (Abschlussprojekt einer LV)</edition>
+         </editionStmt>
+         <publicationStmt>
+            <authority>Zentrum für Informationsmodellierung</authority>
+            <address>
+               <addrLine>Elisabethstraße 59/III</addrLine>
+               <addrLine>8010 Graz</addrLine>
+            </address>
+            <availability status="restricted">
+               <p>Abschlussarbeit im Rahmen der Lehrveranstaltung Digitale Edition,
+                  (Masterstudium Digitale Geisteswissenschaften, Karl-Franzens-Universität Graz)</p>
+            </availability>
+            <date>Februar 2021</date>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Österreich</country>
+                  <region>Steiermark</region>
+                  <settlement>Graz</settlement>
+                  <repository>Steiermärkische Landesbibliothek</repository>
+                  <collection>RaraBib, digitalisierter Altbestand</collection>
+                  <idno>PR_-Manuskripte 68</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <layoutDesc>
+                        <layout columns="1">
+                           <p>Die Erzählung umfasst 4 Seiten.</p>
+                           <p>Eine Seite ist in 2 Bereiche eingeteilt, einem Textbereich und einem etwas breiteren Rand links vom Textbereich.</p>
+                           <p>
+                              Das Manuskript und die Änderungen (inline bzw. am Rand) sind in <term>deutscher Kurrentschrift</term>
+                              in schwarzer Tinte verfasst; für die Überschrift wird die
+                              <term>deutsche Schreibschrift</term> verwendet (auch in schwarzer Tinte).
+                              Auf der ersten Seite befindet sich eine eine große Ziffer, die evtl. die Nummerierung der Erzählung
+                              angibt (Bundstift, braun).
+                           </p>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <profileDesc>
+        <langUsage>
+           <language ident="de" usage="100">Deutsch</language>
+        </langUsage>
+        <textClass>
+           <classCode scheme="DWDS-Kategorie">Belletristik</classCode>
+           <classCode scheme="DWDS-Unterkategorie">Prosa</classCode>
+           <keywords>
+              <term>Erzählung</term>
+              <term>Nachtwächter</term>
+              <term>Schwaben</term>
+              <term>Abfälle-Apfele</term>
+           </keywords>
+        </textClass>
+        <creation>
+           <listChange ordered="true">
+              <listChange>
+                <change xml:id="ST-1">Stage 1: Text, geschrieben vom Autor in (schwarzer) Tinte</change>
+                <change xml:id="ST-1rev">Stage 1rev: Änderungen, die während des Schreibprozesses vom Autor selbst
+                   vorgenommen wurden, wie Streichungen; geschrieben in schwarzer Tinte</change>
+              </listChange>
+              <change xml:id="ST-2">Stage 2: Änderungen im Text (inline), vom Autor in schwarzer Tinte</change>
+              <listChange>
+                 <change xml:id="ST-3">Stage 3: Änderungen, die Ergänzungen am Rand des Manuskriptes betreffen (einige Male
+                    mit Streichungen einhergehend), wobei im Text ein Symbol die Stelle für die Ergänzung kennzeichnet;
+                    vom Autor in schwarzer Tinte geschrieben</change>
+                 <change xml:id="ST-3rev">Stage 3rev: Änderungen in den Ergänzungen am Rand, die während des Schreibprozesses
+                    vollzogen werden; vom Autor in schwarzer Tinte geschrieben</change>
+              </listChange>
+              <change xml:id="ST-4">Stage 4: Ergänzung in Buntstift (braun), Hand nicht eindeutig;
+                 es ist nicht eruierbar, zu welchem Zeitpunkt diese Ergänzung erfolgt ist.</change>
+           </listChange>
+        </creation>
+     </profileDesc>
+     <encodingDesc>
+        <projectDesc>
+           <p>Die digitale Edition der Erzählung von Peter Rosegger ist als Abschlussprojekt im Rahmen der LV Digitale Edition
+              erstellt. Für die LV X-Technologien wurde eine vereinfachte Leseversion des Textes herangezogen (ohne facsimile- bzw. surface-Zuordnung)
+						</p>
+           <p>Unsicherheiten bei der Transkription (<gi>unclear</gi>), die Zeilenstruktur des Textes und die Eigenschaften der Kurrentschrift
+              (Kurrent-s, Geminationsstrich bei n bzw. m) werden dargestellt.
+           </p>
+        </projectDesc>
+        <editorialDecl>
+           <correction>
+              <p>In der Lesefassung wurden keine Korrekturen bei der Rechtschreibung/Grammatik vorgenommen.</p>
+           </correction>
+           <normalization>
+              <p>In der Lesefassung wurden keine Anpassungen an die aktuelle Rechtschreibung vorgenommen.</p>
+           </normalization>
+           <segmentation>
+              <p>Der Text des Manuskripts ist (außer bei den Ergänzungen am Rand) zeilenmäßig (mit<gi>lb</gi>-Element) kodiert.
+              Ergänzungen vom Rand wurden als Teil der Zeile, zu der sie gehören, kodiert.</p>
+           </segmentation>
+        </editorialDecl>
+        <charDecl>
+           <glyph xml:id="ngem">
+              <glyphName>Kurrent-n mit Geminationsstrich</glyphName>
+              <note>Kurzschreibweise in Kurrent für Doppel-n</note>
+           </glyph>
+           <glyph xml:id="mgem">
+              <glyphName>Kurrent-m mit Geminationsstrich</glyphName>
+              <note>Kurzschreibweise in Kurrent für Doppel-m</note>
+           </glyph>
+           <glyph xml:id="langes-s">
+              <glyphName>Kurrent-s</glyphName>
+              <note>am Wortanfang und im Wortinneren verwendet</note>
+           </glyph>
+        </charDecl>
+
+     </encodingDesc>
+   </teiHeader>
+
+  <text>
+      <body>
+         <head>Der Nachtwächter aus Schwaben</head>
+         <p>
+            <lb/>Der <unclear>Dridrum</unclear> war ein reicher Bauer u.
+            <lb/>der
+						<mod>
+							 <del rend="overstrike">
+									 <unclear reason="illegible">Vott</unclear>
+							</del>
+							<del><retrace cause="unclear">B</retrace>o<retrace cause="unclear">ter</retrace></del>
+						</mod>
+						Köpfle ein armer Nacht-
+            <lb/>wächter. Und der Arme bewachte die Güter
+            <lb/>des Reichen u. fand's in Ordnung, alſo. Der
+            <lb/>reiche <unclear>Dridrum</unclear> nährte nicht die Kinder des
+            <lb/>armen Nachtwächters, und fand's auch in
+            <lb/>Ordnung, alſo. Der Köpfle war ein einge-
+            <lb/>wanderter Schwab u. hatte viele Kinderle.
+            <lb/>Und einmal im Herbſt
+						<mod>
+							   <del rend="overstrike">als</del>
+								 <add place="margin">prangte</add>
+						</mod>
+						des <unclear>Dridrum</unclear> groſſer
+						<lb/>Obſtgarten in reichſten Früchten
+						<mod>
+							<add place="inline">.</add>
+							<del rend="overstrike">prangte</del>
+						</mod>
+						Die
+            <lb/>Birnbäume, die Apfelbäume, die Zwetſchken-
+            <lb/>bäume
+						<mod>
+						  <del rend="overstrike">, sie</del>
+					  </mod>
+						 mußten geſtützt werden an den
+            <lb/>Äſten, daß ſie nicht brachen.
+						<lb/>
+						<mod>
+							<add place="margin"><del rend="overstrike">Und</del> Manche
+								 <lb/>üppige Frucht
+								 <lb/>fiel auf den
+								 <lb/>Boden u.
+                 <lb/>hub dort an
+								 <lb/>zu faulen.</add>
+					  </mod>
+						Und wie der <unclear>Dridrum</unclear>,
+            <lb/>die Geldkatz um den Bauch u. den Stecken in der Hand
+            <lb/>vor ſeiner Hauſthür ſtand, um
+            <lb/>auf Viehhandel auſzugehen, kam der
+            <lb/>Köpfle des Weges u. trat den Großbauer
+            <lb/>artig an, ob er nicht
+						<mod>
+							<del rend="overstrike">eines der</del>
+							<add place="above">das</add>
+						</mod>
+						Bäumle
+            <lb/>
+						<mod>
+							<del rend="overstrike"><unclear reason="illegible">au</unclear></del>
+						</mod>
+						ablauſen dürfe für die Kinderle? Es
+            <lb/>war ein alter Birnbaum, der abſeits ſtand,
+            <lb/>ſchon ſehr viele dürre Äste hatte u. nur noch
+            <lb/>einige schlechte Früchte trug.
+         </p>
+         <p>
+            <lb/>Der <unclear>Dridrum</unclear>
+						<mod>
+							<add place="inline">,</add>
+							<del rend="overstrike"></del>
+							<lb/>
+							<add place="margin">der einmal
+								<lb/>im Landtage
+                <lb/>geſeſſen war
+								<lb/>u. ſich gern
+								<lb/>auf den Herrn-
+								<lb/>bauer hinaus-
+								<lb/>ſpielte, antwortete-
+								<lb/>te hübſch
+                <lb/>hochdeutſch:</add>
+					</mod>
+					 "Na, das
+            <lb/>laß' ich nicht, Nachtwächter, aber die
+            <lb/>Abfälle, we<g ref="#ngem">nn</g> du willſt, kannſt du haben vom
+            <lb/>ganzen Garten."
+         </p>
+         <p>
+            <lb/>"Was sagſt, Bauer?" fragte der Köpfle
+            <lb/>ganz erregt, "ich muß dich nit verſtanden
+            <lb/>haben, <unclear>Dridrum</unclear>. Vom ganzen Gärtle
+            <lb/>ſagſt?"
+         </p>
+         <p>
+            <lb/>"Vom ganzen Garten kannſt du die
+            <lb/>Abfälle haben. Geſagt hab' ichs!" ſo der
+            <lb/>Großbauer u. machte ſich dann auf den <lb/>Weg.
+         </p>
+         <p>
+            <lb/>Jetzt ging in der Nachtwächterfamilie
+            <lb/>das Leben an. Mann, Weib u. Kind
+            <lb/>machten ſich mit
+						<mod>
+							<del rend="overstrike">Körben</del>
+            </mod>
+						bei Nach-
+            <lb/>barn entlehnten Körben u. Butten
+            <lb/>auf, um die Äpfel abzunehmen u.
+            <lb/>einzuheimſen im ganzen <unclear>Dridrum</unclear>-
+            <lb/>garten. Die Nachbarn wunderten
+            <lb/>ſich, daß der Großbauer es geſtattet
+            <lb/>habe, der Köpfle verſicherte ſie i<g ref="#mgem">mm</g>er
+            <lb/>wieder, daß er's ihm
+						<mod>
+							<del rend="overstrike">nicht weni</del>
+						</mod>
+						zwei-
+            <lb/>mal auſdrücklich erlaubt hatte, alle
+            <lb/>Äpfel im Garten zu nehmen.
+						<mod>
+							<add place="above"><del rend="overstrike">Dieſe armen Leute</del></add>
+							<del rend="overstrike">Sie</del>
+							<add place="inline">Sie</add>
+						</mod>
+            <lb/>füllten ihr Häuserle damit an, die
+            <lb/>Nachtwächtersleute,
+						<mod>
+							<add place="margin">der Dachboden,</add>
+						</mod>
+						die <unclear reason="illegible">par Truhen</unclear>
+            <lb/>die Winkel unter dem Bette, alles ward
+            <lb/>voller Äpfel u. ſie waren verſorgt
+            <lb/>über den Winter u. das Weib fing
+            <lb/>gleich an Apfelſpaltele zu dörren.
+         </p>
+         <p>
+            <lb/>Als der <unclear>Dridrum</unclear> vom Viehhandel
+            <lb/>heimkam u. die abgeleerten Apfel-
+            <lb/>bäume ſah, lief er ſogleich zum
+            <lb/>Nachtwächter, der hätte ſeines Amtes
+            <lb/>ſchlecht gewaltet, ſie hätten ihm alle Äpfel
+            <lb/>geſtohlen, während er fort geweſen!
+         </p>
+         <p>
+            <lb/>"Was
+						<mod>
+							<del rend="overstrike">willst</del>
+						</mod>
+						denn?" fragte der Nacht-
+            <lb/>wächter, "geſtohlen wohl nit! Du haſt
+            <lb/>mir ſie ja erlaubt, die Äpfele vom
+            <lb/>ganzen Garten."
+         </p>
+         <p>
+            <lb/>"Die <mod type="underline" change="#ST-1rev">Abfälle</mod> hab' ich dir erlaubt,
+            <lb/>und nit einen Stängel mehr!"
+         </p>
+         <p>
+            <lb/>"Aber Herr-
+						<mod>
+							<del rend="overstrike">
+							<unclear reason="illegible">jeſſales,</unclear>
+							Bauer
+						</del>
+						</mod>
+            <lb/>göttle, du haſt ja <mod type="underline" change="#ST-1rev">Apfele</mod> gesagt"
+         </p>
+         <p>
+            <lb/>Anfangs hatte es den Anſchein, als wollte
+            <lb/>er klagbar werden, der <unclear>Dridrum</unclear>, aber
+            <lb/>die
+						<mod>
+							<del rend="overstrike">Nachbarschaft hat</del>
+							<add place="margin">Nachbarn haben</add>
+						</mod>
+						ſo unbändig über
+            <lb/>die Geſchichte gelacht, daß er endlich auch
+            <lb/>
+						<mod>
+							<del rend="overstrike">ſelbſt</del>
+							<add place="margin">ſelber</add>
+						</mod>
+						mitgelacht hat.
+         </p>
+      </body>
+  </text>
+
+</TEI>
